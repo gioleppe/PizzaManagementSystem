@@ -68,6 +68,10 @@ public class OrderController : ControllerBase
             : Ok(order);
     }
 
+    /// <summary>
+    /// This endpoint lets you close the next order
+    /// </summary>
+    /// <returns></returns>
     [HttpDelete("CloseNext")]
     [ProducesResponseType(200)]
     [ProducesResponseType(400)]

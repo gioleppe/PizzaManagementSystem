@@ -24,7 +24,7 @@ The program bind on **port 4242** by default. You can change it in the appsettin
 2. `dotnet restore` to restore all nuget dependencies
 3. check appsettings.Development to see if the **PostgreConnectionString** and the **AspNetUrls** settings are fine for you
 4. `dotnet run watch --project .\PizzaManagementSystem\` to run the program
-5. go to localhost:4242/swagger/index.html to see Swagger's documentation page and make some requests
+5. go to **localhost:4242/swagger/index.html** to see Swagger's documentation page and make some requests
 
 ---
 
