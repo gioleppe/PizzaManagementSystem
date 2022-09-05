@@ -1,6 +1,4 @@
-﻿using PizzaManagementSystem.Domain.Enums;
-
-namespace PizzaManagementSystem.Domain.Classes;
+﻿namespace PizzaManagementSystem.Domain.Classes;
 
 public class Order
 {
