@@ -23,7 +23,7 @@ public class OrderController : ControllerBase
 
     /// <summary>
     ///     This endpoint lets you place a new order. You must provide an array of valid order items.
-    ///     The pizza type is modeled as an Enum, as such:
+    ///     Pizza types available at launch are as follows:
     ///     Margherita = 0,
     ///     Ortolana = 5,
     ///     Diavola = 10,
