@@ -11,7 +11,7 @@ public class Order
 
 public class OrderItemDto
 {
-    public PizzaType Type { get; set; }
+    public int Type { get; set; }
     public int Quantity { get; set; }
 }
 
@@ -19,7 +19,7 @@ public class OrderItem
 {
     public int OrderItemId { get; set; }
     public int OrderId { get; set; }
-    public PizzaType Type { get; set; }
+    public int PizzaTypeId { get; set; }
     public int Quantity { get; set; }
 }
 

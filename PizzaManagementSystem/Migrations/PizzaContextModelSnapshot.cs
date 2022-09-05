@@ -48,10 +48,10 @@ namespace PizzaManagementSystem.Migrations
                     b.Property<int>("OrderId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("Quantity")
+                    b.Property<int>("PizzaTypeId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("Type")
+                    b.Property<int>("Quantity")
                         .HasColumnType("integer");
 
                     b.HasKey("OrderItemId");
@@ -59,6 +59,29 @@ namespace PizzaManagementSystem.Migrations
                     b.HasIndex("OrderId");
 
                     b.ToTable("OrderItem");
+                });
+
+            modelBuilder.Entity("PizzaManagementSystem.Domain.Classes.PizzaType", b =>
+                {
+                    b.Property<int>("PizzaTypeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("PizzaTypeId"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("integer");
+
+                    b.HasKey("PizzaTypeId");
+
+                    b.ToTable("PizzaTypes");
                 });
 
             modelBuilder.Entity("PizzaManagementSystem.Domain.Classes.OrderItem", b =>

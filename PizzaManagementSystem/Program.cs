@@ -2,6 +2,7 @@ using System.Reflection;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using PizzaManagementSystem.Database;
+using PizzaManagementSystem.Database.Init;
 using PizzaManagementSystem.Domain.Classes;
 using PizzaManagementSystem.Domain.Validators;
 using PizzaManagementSystem.Services;
@@ -44,6 +45,7 @@ using (var scope = app.Services.CreateScope())
 
     var context = services.GetRequiredService<PizzaContext>();
     context.Database.Migrate();
+    DbInitializer.Initialize(context);
 }
 
 // Configure the HTTP request pipeline.

@@ -10,4 +10,5 @@ public class PizzaContext : DbContext
     }
 
     public DbSet<Order> Orders { get; set; }
+    public DbSet<PizzaType> PizzaTypes { get; set; }
 }
